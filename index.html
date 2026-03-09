@@ -17,42 +17,42 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-text">
-          <span class="brand-top">NARROW</span>
-          <span class="brand-bottom">PATH <b>CRC</b></span>
-        </span>
+        <img src="img/npcrc_logo.png" alt="Narrow Path CRC Logo" class="logo-image" />
       </a>
 
-      <nav class="nav">
-        <a href="#why">Why</a>
-        <a href="#where">Where</a>
-        <a href="#newsletter">Newsletter</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-
-      <a class="btn btn-small" href="#join">Join Now</a>
-
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
 
-    <div class="mobile-nav" id="mobileNav" hidden>
-      <a href="#why">Why</a>
-      <a href="#where">Where</a>
-      <a href="#newsletter">Newsletter</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn" href="#join">Join Now</a>
+    <div class="mobile-nav" id="mobileNav">
+      <div class="container mobile-nav-inner">
+        <a href="#why">Why</a>
+        <a href="#where">Where</a>
+        <a href="#socials">Socials</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#faq">FAQ</a>
+      </div>
     </div>
   </header>
+
+  <div class="lime-banner">
+          <div class="container lime-inner">
+            <p><b>Join us WEEKLY</b> for a <b>FREE</b> 2K community <b>RUN OR WALK</b>. Move at your own pace, volunteer, or come out to support.</p>
+          </div>
+  </div>
 
   <main id="main">
     <!-- HERO -->
     <section class="hero" aria-label="Hero">
+
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="kicker">NARROW PATH CRC</p>
           <h1>
             <span class="muted">No one</span>
             <span class="strong"> has to</span><br />
@@ -60,30 +60,16 @@
             <span class="muted">alone.</span>
           </h1>
           <p class="lead">
-            We're a Christian run club rooted in the love of Jesus, creating space for anyone —
-            no matter their pace, past, or beliefs — to find community in the Kitchener–Waterloo region.
+            Think less “elite run club,” more “found family with sneakers.” Come run, come walk, or come just to chat because someone is always there to match your speed or your energy. Ice cream and socials are basically guaranteed. Rooted in the love of Jesus, we are building a community where no one has to show up alone.
           </p>
 
           <div class="hero-actions" id="join">
-            <a class="btn" href="#where">Join Now</a>
-            <a class="btn btn-ghost" href="#promo">Watch Promo</a>
+            <a class="btn" href="/signup.html">Join Now</a>
           </div>
         </div>
 
         <div class="hero-visual" aria-label="Runner image placeholder">
-          <!-- Replace this block with a real image later:
-               <img src="assets/runner.png" alt="Runner" /> -->
-          <div class="runner-placeholder">
-            <span>Runner Image</span>
-          </div>
-
-          <a class="btn btn-floating" href="#join">Join Now</a>
-        </div>
-      </div>
-
-      <div class="lime-banner">
-        <div class="container lime-inner">
-          <p><b>Join us WEEKLY</b> for a <b>FREE</b> 2K community <b>RUN OR WALK</b>. Move at your own pace, volunteer, or come out to support.</p>
+               <img src="img/IMG_9067.JPG" alt="Runner" />
         </div>
       </div>
     </section>
@@ -91,31 +77,35 @@
     <!-- PROMO + WHY -->
     <section class="why" id="why">
       <div class="container why-grid">
+
         <div class="promo-card" id="promo">
           <div class="promo-frame" role="group" aria-label="Promo video">
-            <!-- Replace with an embedded YouTube/Vimeo iframe later. -->
-            <div class="video-placeholder">
-              <span>Promo<br/>Video</span>
-            </div>
+            <iframe
+              src="https://www.youtube.com/embed/s-eVwWmHLjw"
+              title="Narrow Path CRC Promo Video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
           </div>
-          <p class="promo-note">Add your promo video embed here when ready.</p>
+          <p class="promo-note">Watch our promo video to understand our "why?"</p>
         </div>
 
         <div class="why-card">
           <p class="script">Why</p>
           <h2>Narrow Path?</h2>
           <ul class="why-list">
-            <li>You’ll find real community</li>
-            <li>You’ll be encouraged</li>
-            <li>You’ll experience authentic faith</li>
-            <li>You’ll belong at any pace</li>
-            <li>You’ll be part of something bigger</li>
+            <li>Meet your homies</li>
+            <li>Get roasted (just kidding — get encouraged)</li>
+            <li>Pace doesn’t matter (most are here to chat anyway)</li>
+            <li>Experience the Christian faith</li>
           </ul>
           <p class="why-footnote">
             Our movement exists beyond fitness. We serve and care for the wider Waterloo Region community,
             meeting people where they are.
           </p>
         </div>
+
       </div>
     </section>
 
@@ -129,15 +119,15 @@
           <dl class="where-meta">
             <div>
               <dt>Location</dt>
-              <dd>Fill in with sample text for now</dd>
+              <dd>East Gazebo Waterloo Park, 50 Young St W, Waterloo, ON N2J 4A8</dd>
             </div>
             <div>
               <dt>Time</dt>
-              <dd>Fill in with sample text for now</dd>
+              <dd>Every week, Saturday @ 10am </dd>
             </div>
             <div>
               <dt>Registration</dt>
-              <dd>Before your first come out, please sign up below</dd>
+              <dd>Before your first come out, please fill out the form below and join the discord</dd>
             </div>
           </dl>
 
@@ -145,45 +135,78 @@
         </div>
 
         <div class="map-card" aria-label="Map">
-          <!-- Replace with a real embed:
-               <iframe ... src="https://www.google.com/maps/embed?..."></iframe> -->
-          <div class="map-placeholder">
-            <span>Map</span>
-          </div>
+          <img src="img/IMG_9115.JPG" alt="Map showing the location of the run" class="map-image" />
         </div>
       </div>
     </section>
 
-    <!-- NEWSLETTER -->
-    <section class="newsletter" id="newsletter">
-      <div class="container newsletter-grid">
-        <div class="image-card" aria-label="Image placeholder">
-          <div class="image-placeholder">
-            <span>Image</span>
+
+    <!-- SOCIALS -->
+    <section class="socials" id="socials">
+      <div class="container socials-grid">
+
+        <!-- image 1 -->
+        <div class="socials-image-card">
+          <img src="img/IMG_9083.JPG" alt="Narrow Path CRC community" class="socials-image">
+        </div>
+
+        <!-- image 2 -->
+        <div class="socials-image-card">
+          <img src="img/IMG_9086.JPG" alt="Narrow Path CRC community" class="socials-image">
+        </div>
+
+        <!-- text card -->
+        <div class="socials-card">
+          <p class="script">Stay</p>
+          <h2>Connected</h2>
+          <p class="socials-copy">
+            Follow along for weekly updates, community moments, run reminders, and future social events.
+          </p>
+
+          <div class="social-links">
+            <a class="social-link" href="#" target="_blank">
+              <span class="social-name">Instagram</span>
+              <span class="social-handle">@narrowpathcrc</span>
+            </a>
+
+            <a class="social-link" href="https://discord.gg/xfBAWFBn" target="_blank" rel="noopener noreferrer">
+              <span class="social-name">Discord</span>
+              <span class="social-handle">Join the community</span>
+            </a>
+
+            <a class="social-link" href="#">
+              <span class="social-name">Email</span>
+              <span class="social-handle">hello@narrowpathcrc.ca</span>
+            </a>
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+      <!-- NEWSLETTER -->
+      <div class="container newsletter-grid">
+        <div class="image-card">
+          <img src="img/IMG_9096.JPG" alt="Narrow Path CRC group" class="newsletter-image" />
         </div>
 
         <div class="newsletter-card">
           <p class="script">Join</p>
-          <h2>Our Newsletter</h2>
+          <h2>the community</h2>
           <p class="newsletter-copy">
             We'll send occasional emails with run info, including run updates, socials, and exciting event details.
           </p>
 
-          <form class="form" action="#" method="post" onsubmit="return false;">
-            <label>
-              <span class="label">Email Address</span>
-              <input type="email" name="email" placeholder="you@example.com" required />
-            </label>
+          <div class="signup-cta">
+            <a class="btn btn-full signup-btn" href="/signup.html">
+              Sign Up for Narrow Path
+            </a>
 
-            <label class="hidden">
-              <span class="label">Password</span>
-              <input type="password" name="password" placeholder="Password" />
-            </label>
-
-            <button class="btn btn-full" type="submit">Submit</button>
-            <p class="form-hint">Hook this form up to Mailchimp, ConvertKit, or a Google Form later.</p>
-          </form>
+            <p class="form-hint">
+              Takes less than 30 seconds. We promise not to spam you — just the good stuff.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -200,7 +223,7 @@
     <!-- FAQ -->
     <section class="faq" id="faq" aria-label="Frequently Asked Questions">
       <div class="container faq-card">
-        <p class="script">Frequently</p>
+        <p class="script" style="color: var(--teal);">Frequently</p>
         <h2>Asked Questions</h2>
 
         <div class="accordion" data-accordion>
@@ -231,6 +254,13 @@
               <p>Join a weekly run, volunteer, or sign up for updates. If you want to help lead, reach out through the newsletter form.</p>
             </div>
           </details>
+
+          <details>
+            <summary>Are there social events?</summary>
+            <div class="answer">
+              <p>Yes! We have regular social events for members to connect and build relationships.</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
@@ -247,23 +277,7 @@
           </span>
         </div>
         <p class="footer-tagline">No one has to run the path alone.</p>
-        <div class="social">
-          <a href="#" aria-label="Instagram">in</a>
-          <a href="#" aria-label="Email">@</a>
-        </div>
       </div>
-
-      <div class="footer-news">
-        <h3>Join Our Newsletter</h3>
-        <form class="footer-form" action="#" method="post" onsubmit="return false;">
-          <input type="email" placeholder="your@email.com" aria-label="Email Address" required />
-          <button class="btn btn-small" type="submit">Subscribe</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <small>© <span id="year"></span> Narrow Path CRC. Built on GitHub Pages.</small>
     </div>
   </footer>
 

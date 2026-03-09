@@ -1,30 +1,57 @@
-// Mobile nav toggle
-const toggle = document.querySelector('.nav-toggle');
-const mobileNav = document.getElementById('mobileNav');
+const toggle = document.querySelector(".nav-toggle");
+const mobileNav = document.getElementById("mobileNav");
 
 if (toggle && mobileNav) {
-  toggle.addEventListener('click', () => {
-    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!isOpen));
-    mobileNav.hidden = isOpen;
+  toggle.addEventListener("click", () => {
+    const isOpen = toggle.classList.toggle("is-open");
+    mobileNav.classList.toggle("is-open", isOpen);
+    toggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  // Close mobile nav when a link is clicked
-  mobileNav.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      toggle.setAttribute('aria-expanded', 'false');
-      mobileNav.hidden = true;
+  mobileNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("is-open");
+      toggle.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
     });
   });
 }
 
-// Accordion: allow only one open at a time (optional but matches modern FAQ behavior)
-document.querySelectorAll('[data-accordion] details').forEach((d) => {
-  d.addEventListener('toggle', () => {
-    if (d.open) {
-      document.querySelectorAll('[data-accordion] details').forEach((other) => {
-        if (other !== d) other.open = false;
-      });
+// Smooth scroll ONLY for on-page hash links
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
+
+    if (!href || href === "#") return;
+
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    e.preventDefault();
+
+    const header = document.querySelector(".site-header");
+    const banner = document.querySelector(".lime-banner");
+
+    const headerHeight = header ? header.offsetHeight : 0;
+    const bannerHeight = banner ? banner.offsetHeight : 0;
+    const extraOffset = 16;
+
+    const y =
+      target.getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight -
+      bannerHeight -
+      extraOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+
+    if (mobileNav && toggle) {
+      mobileNav.classList.remove("is-open");
+      toggle.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
     }
   });
 });
