@@ -204,6 +204,7 @@ a:hover{ text-decoration: underline; }
   padding: .9rem 0;
   font-weight: 700;
   text-align: center;
+  font-size: 1.1rem;
 }
 
 .lime-inner p{
